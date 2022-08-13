@@ -63,13 +63,17 @@ body {}
     border-radius: 9px;
 }
 
-.full-lyrics,
 #display ul {
     list-style: none;
     margin-top: 15px;
     color: ;
     background: ;
     padding: 26px;
+}
+
+.full-lyrics {
+    text-align: center;
+    padding: 25px;
 }
 
 #display ul li {
@@ -105,7 +109,12 @@ body {}
 .full-lyrics h2 {
     text-align: center;
     margin-top: 13px;
-    color: blueviolet;
+    color: #270a42;
+}
+
+.full-lyrics p {
+    padding-top: 20px;
+    font-weight: 700;
 }
 
 .box h2 img {
