@@ -214,3 +214,12 @@ body {}
 
     }
 }
+@media(max-height:500px){
+    .btn-s {
+        width: 20vw;
+        height: 10vh;}
+    #song{
+        width: 60vw;
+        height: 10vh;
+    }
+}

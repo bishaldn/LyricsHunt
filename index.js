@@ -77,9 +77,9 @@ function fun(){
     window.location.reload();
 }
 let pictures = document.getElementById('change-img');
-const img_collection = ['img1.webp','img2.webp','img3.jpg'];
+const img_collection = ['img1.webp','img2.webp','img3.jpg','img4.webp','img5.webp','img6.webp','img7.webp','img8.webp','img9.webp','img10.webp'];
 setInterval(() => {
     
-    let ranNum = Math.floor(Math.random()*3);
+    let ranNum = Math.floor(Math.random()*10);
     pictures.src = img_collection[ranNum];
 }, 2000);
