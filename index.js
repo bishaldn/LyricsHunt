@@ -58,3 +58,28 @@ const getLyrics = async (artist, songTitle) => {
        </div>
        `;
 }
+
+let box_remove = document.getElementById('box-id');
+let start_again = document.getElementById('start-again');
+submit.addEventListener('click', removeBox=()=>{
+         song_name.style.display = 'none';
+         box_remove.style.height = '16vh';
+         box_remove.style.margin='10px auto';
+         pictures.style.display='none';
+         submit.style.display= 'none';
+         start_again.innerHTML = `
+         <button class="btn-s1" id="search-song" target="blank" onclick="fun()">Search-Again</button>
+         `;
+
+});
+
+function fun(){
+    window.location.reload();
+}
+let pictures = document.getElementById('change-img');
+const img_collection = ['img1.webp','img2.webp','img3.jpg'];
+setInterval(() => {
+    
+    let ranNum = Math.floor(Math.random()*3);
+    pictures.src = img_collection[ranNum];
+}, 2000);
