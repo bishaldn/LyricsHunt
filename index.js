@@ -30,7 +30,7 @@ const showData = (realData) => {
                     <img src=  "${song.artist.picture}" alt="${song.artist.name}"/>
                     <strong>${song.artist.name}</strong>
                 </div>
-                <span data-artist="${song.artist.name}" data-song-title="${song.title}">GET LYRICS</span>
+                <span data-artist="${song.artist.name}" data-song-title="${song.title}" target="_blank">GET LYRICS</span>
             </li>
             `).join('')}
       
@@ -61,6 +61,7 @@ const getLyrics = async (artist, songTitle) => {
 
 let box_remove = document.getElementById('box-id');
 let start_again = document.getElementById('start-again');
+let loading = document.getElementById('show-load');
 submit.addEventListener('click', removeBox=()=>{
          song_name.style.display = 'none';
          box_remove.style.height = '16vh';
@@ -68,8 +69,18 @@ submit.addEventListener('click', removeBox=()=>{
          pictures.style.display='none';
          submit.style.display= 'none';
          start_again.innerHTML = `
-         <button class="btn-s1" id="search-song" target="blank" onclick="fun()">Search-Again</button>
+         <button class="btn-s1" id="search-song" target="blank" onclick="fun()">Back to Home</button>
          `;
+         setTimeout(() => {
+            loading.innerHTML = `
+            <img  id="loading-icon"src="https://icons8.com/vue-static/landings/animated-icons-new/icons/windows-10/circles-menu-2/circles-menu-2_128.gif">`;
+ 
+         }, 200);
+         setTimeout(() => {
+            loading.style.display = 'none';
+         }, 2000);
+         
+        
 
 });
 

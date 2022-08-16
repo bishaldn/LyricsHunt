@@ -67,7 +67,7 @@ body {}
     width: 54vw;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    margin: 20px auto;
+    margin: 60px auto;
     background: linear-gradient(to right, #AF97D7, #ABF88C);
     border-radius: 9px;
 }
@@ -114,6 +114,10 @@ body {}
     border-radius: 8px;
     cursor: pointer;
 }
+#display ul li span:hover{
+    background : blueviolet;
+    color:white;
+}
 
 .full-lyrics h2 {
     text-align: center;
@@ -140,6 +144,9 @@ body {}
     text-align: center;
     width: 300px;
     border-radius: 13px;
+}
+#loading-icon{
+    width:60px;
 }
 
 @keyframes move {
@@ -192,7 +199,7 @@ body {}
     }
 
     #display {
-        margin: 1px auto;
+        margin: 50px auto;
         width: 82vw;
         padding: 0px;
     }
